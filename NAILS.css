@@ -1,0 +1,74 @@
+:root{
+    --primario:#030c13;
+    --secundario:#435B66;
+    --terciario: #a76f6f;
+    --cauternario: #EAB2A0;
+    --negro:#000000;
+
+
+}
+/*Globales para CSS*/
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+/*Globales para CSS*/
+
+html{
+    background-color: var(--primario);
+    scroll-behavior: smooth;
+    color: aliceblue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+
+.título{
+    margin: 0px;
+    background-color: rgb(22, 22, 23/80%);
+    backdrop-filter: blur(8px);
+    /*background-color: black;*/
+    position: fixed;
+    left: 0;
+    top: 0;
+    right:0;
+    font-size: larger;
+    padding: 1rem;
+    text-align: center;
+    color: var(--terciario);
+}
+a{
+    text-decoration: none;
+    color: var(--secundario);
+    align-content: center;
+}
+a:hover{
+    color:var(--terciario);
+}
+
+
+
+
+.Products{
+    background-color: blanchedalmond;
+    color: black;
+}
+
+.foo{
+    width: 100%;
+    background-color: var(--negro);
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap:50px;
+    padding: 45px,0px;
+    text-align: center;
+}
+
+.abajo{
+    display: inline-block;
+    padding: 15px,10px;
+    text-align:center
+}
