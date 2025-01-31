@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirección Automática</title>
+    <script>
+        // Lista de URLs a las que redirigirse
+        const urls = [
+            'https://www.ejemplo1.com',
+            'https://www.ejemplo2.com',
+            'https://www.ejemplo3.com',
+            'https://www.ejemplo4.com'
+        ];
+
+        // Tiempo en milisegundos que se debe esperar en cada página (5 segundos)
+        const waitTime = 5 * 1000; // 5 segundos
+
+        // Función para redirigir a la siguiente URL
+        function redirectToNextPage(index) {
+            if (index < urls.length) {
+                setTimeout(() => {
+                    // Cambiar la URL actual a la nueva URL
+                    window.location.href = urls[index];
+                    
+                    // Usar un temporizador para iniciar la siguiente redirección después de cambiar de página
+                    setTimeout(() => {
+                        redirectToNextPage(index + 1);
+                    }, waitTime);
+                }, waitTime);
+            }
+        }
+
+        // Iniciar el proceso de redirección cuando el documento esté listo
+        document.addEventListener('DOMContentLoaded', () => {
+            redirectToNextPage(0);
+        });
+    </script>
+</head>
+<body>
+    <!-- Contenido de tu página aquí -->
+    <h1>Redirigiendo cada 5 segundos...</h1>
+</body>
+</html>
